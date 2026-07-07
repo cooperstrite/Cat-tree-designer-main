@@ -27,6 +27,8 @@ const seedCatalog = [
     material: "wood + removable cushion",
     source: "Chewy",
     sourceChecked: "2026-07-07",
+    imageUrl: "https://image.chewy.com/catalog/general/images/frisco-cushioned-wall-mounted-cat-wall-shelf/img-398899._AC_SX500_SY400_QL75_V1_.jpg",
+    assetUrl: "assets/products/frisco-cushioned-wall-shelf.jpg",
     url: "https://www.chewy.com/frisco-cushioned-wall-mounted-cat/dp/399655"
   },
   {
@@ -46,6 +48,8 @@ const seedCatalog = [
     material: "wood shelf + acrylic bowl + sisal mats",
     source: "Chewy",
     sourceChecked: "2026-07-07",
+    imageUrl: "https://image.chewy.com/catalog/general/images/frisco-acrylic-bowl-wall-mounted-cat-wall-shelf/img-738262._AC_SX500_SY400_QL75_V1_.jpg",
+    assetUrl: "assets/products/frisco-acrylic-bowl-wall-shelf.jpg",
     url: "https://www.chewy.com/frisco-acrylic-bowl-wall-mounted-cat/dp/399651"
   },
   {
@@ -65,6 +69,13 @@ const seedCatalog = [
     material: "wood cubbies + chenille bridge + sisal mats",
     source: "Chewy",
     sourceChecked: "2026-07-07",
+    imageUrl: "https://image.chewy.com/catalog/general/images/frisco-cat-silhouette-with-bridge-wall-mounted-cat-wall-shelves/img-357348._AC_SX500_SY400_QL75_V1_.jpg",
+    assetUrl: "assets/products/frisco-cat-silhouette-bridge-set.jpg",
+    packageParts: [
+      { name: "Frisco Cat Silhouette Left Cubby", shortName: "Left Cubby", type: "hideout", model: "frisco-silhouette-cubby", width: 14, depth: 9.65, height: 16, offsetX: 0, offsetY: 0 },
+      { name: "Frisco Cat Silhouette Bridge Span", shortName: "Bridge Span", type: "bridge", model: "frisco-silhouette-bridge-span", width: 28, depth: 8, height: 4, offsetX: 12, offsetY: 5 },
+      { name: "Frisco Cat Silhouette Right Cubby", shortName: "Right Cubby", type: "hideout", model: "frisco-silhouette-cubby", width: 14, depth: 9.65, height: 16, offsetX: 38, offsetY: 0 }
+    ],
     url: "https://www.chewy.com/frisco-cat-silhouette-bridge-wall/dp/399653"
   },
   {
@@ -84,6 +95,14 @@ const seedCatalog = [
     material: "wood + sisal mats",
     source: "Chewy",
     sourceChecked: "2026-07-07",
+    imageUrl: "https://image.chewy.com/catalog/general/images/moe/068f1538-172d-77cc-8000-b0de790f1b1e._AC_SX500_SY400_QL75_V1_.jpg",
+    assetUrl: "assets/products/frisco-wall-mounted-cat-steps.jpg",
+    packageParts: [
+      { name: "Frisco Wall Mounted Cat Step 1", shortName: "Step 1", type: "shelf", model: "frisco-single-step", width: 8, depth: 8, height: 2.5, offsetX: 0, offsetY: 0 },
+      { name: "Frisco Wall Mounted Cat Step 2", shortName: "Step 2", type: "shelf", model: "frisco-single-step", width: 8, depth: 8, height: 2.5, offsetX: 9, offsetY: 6 },
+      { name: "Frisco Wall Mounted Cat Step 3", shortName: "Step 3", type: "shelf", model: "frisco-single-step", width: 8, depth: 8, height: 2.5, offsetX: 18, offsetY: 12 },
+      { name: "Frisco Wall Mounted Cat Step 4", shortName: "Step 4", type: "shelf", model: "frisco-single-step", width: 8, depth: 8, height: 2.5, offsetX: 27, offsetY: 18 }
+    ],
     url: "https://www.chewy.com/frisco-wall-mounted-cat-steps/dp/2191294"
   },
   {
@@ -103,6 +122,8 @@ const seedCatalog = [
     material: "bent ply + solid wood + carpet pad",
     source: "Chewy",
     sourceChecked: "2026-07-07",
+    imageUrl: "https://image.chewy.com/is/image/catalog/258402_MAIN._AC_SX500_SY400_QL75_V1603403789_.jpg",
+    assetUrl: "assets/products/refined-feline-lotus-leaf-shelf.jpg",
     url: "https://www.chewy.com/refined-feline-lotus-leaf-wall/dp/284856"
   },
   {
@@ -122,6 +143,12 @@ const seedCatalog = [
     material: "solid poplar + removable mats",
     source: "Chewy",
     sourceChecked: "2026-07-07",
+    imageUrl: "https://image.chewy.com/catalog/general/images/armarkat-real-wood-cat-wall-additions-natural-beige-2-count/img-305064._AC_SX500_SY400_QL75_V1_.jpg",
+    assetUrl: "assets/products/armarkat-real-wood-wall-additions.jpg",
+    packageParts: [
+      { name: "Armarkat Real Wood Lower Shelf", shortName: "Lower Shelf", type: "shelf", model: "armarkat-single-shelf", width: 20, depth: 12, height: 3, offsetX: 0, offsetY: 0 },
+      { name: "Armarkat Real Wood Upper Shelf", shortName: "Upper Shelf", type: "shelf", model: "armarkat-single-shelf", width: 20, depth: 12, height: 3, offsetX: 0, offsetY: 12 }
+    ],
     url: "https://www.chewy.com/armarkat-real-wood-cat-wall-additions/dp/515630"
   },
   {
@@ -141,6 +168,20 @@ const seedCatalog = [
     material: "wood + washable pads + cushioned house",
     source: "Chewy",
     sourceChecked: "2026-07-07",
+    imageUrl: "https://image.chewy.com/catalog/general/images/moe/0678567f-c213-75ad-8000-aed7bb533482._AC_SX500_SY400_QL75_V1_.jpg",
+    assetUrl: "assets/products/pawhut-10-level-wall-shelves.jpg",
+    packageParts: [
+      { name: "PawHut Cushioned House", shortName: "House", type: "hideout", model: "pawhut-house", width: 12, depth: 12.75, height: 8, offsetX: 2, offsetY: 0 },
+      { name: "PawHut Step 1", shortName: "Step 1", type: "shelf", model: "pawhut-step", width: 7, depth: 8, height: 1.8, offsetX: 0, offsetY: 7 },
+      { name: "PawHut Step 2", shortName: "Step 2", type: "shelf", model: "pawhut-step", width: 7, depth: 8, height: 1.8, offsetX: 9, offsetY: 8.5 },
+      { name: "PawHut Step 3", shortName: "Step 3", type: "shelf", model: "pawhut-step", width: 7, depth: 8, height: 1.8, offsetX: 0, offsetY: 10 },
+      { name: "PawHut Step 4", shortName: "Step 4", type: "shelf", model: "pawhut-step", width: 7, depth: 8, height: 1.8, offsetX: 9, offsetY: 11.5 },
+      { name: "PawHut Step 5", shortName: "Step 5", type: "shelf", model: "pawhut-step", width: 7, depth: 8, height: 1.8, offsetX: 0, offsetY: 13 },
+      { name: "PawHut Step 6", shortName: "Step 6", type: "shelf", model: "pawhut-step", width: 7, depth: 8, height: 1.8, offsetX: 9, offsetY: 14.5 },
+      { name: "PawHut Step 7", shortName: "Step 7", type: "shelf", model: "pawhut-step", width: 7, depth: 8, height: 1.8, offsetX: 0, offsetY: 16 },
+      { name: "PawHut Step 8", shortName: "Step 8", type: "shelf", model: "pawhut-step", width: 7, depth: 8, height: 1.8, offsetX: 9, offsetY: 17.5 },
+      { name: "PawHut Top Pad", shortName: "Top Pad", type: "shelf", model: "pawhut-step", width: 12, depth: 10, height: 2, offsetX: 2, offsetY: 19 }
+    ],
     url: "https://www.chewy.com/pawhut-10-level-wood-wall-mounted-cat/dp/1621678"
   },
   {
@@ -160,6 +201,8 @@ const seedCatalog = [
     material: "sisal post + jumping platform",
     source: "Chewy",
     sourceChecked: "2026-07-07",
+    imageUrl: "https://image.chewy.com/catalog/general/images/trixie-wall-set-1-wall-mount-cat-scratching-post-with-perch-natural-white/img-162427._AC_SX500_SY400_QL75_V1_.jpg",
+    assetUrl: "assets/products/trixie-wall-set-1-post-perch.jpg",
     url: "https://www.chewy.com/trixie-wall-set-1-wall-mount-cat/dp/822382"
   }
 ];
@@ -177,6 +220,8 @@ const state = {
     width: 144,
     height: 96,
     depth: 48,
+    color: "#f0eadc",
+    material: "paint",
     corner: false,
     cornerDepth: 72,
     photoDataUrl: ""
@@ -209,6 +254,12 @@ const three = {
   wallGroup: null,
   piecesGroup: null,
   catGroup: null,
+  raycaster: null,
+  pointer: null,
+  imageNodes: new Map(),
+  textureLoader: null,
+  productTextures: new Map(),
+  wallTextureCache: new Map(),
   textures: {},
   animationFrame: 0,
   ready: false,
@@ -217,6 +268,17 @@ const three = {
     pitch: 0.17,
     distance: 210,
     dragging: false,
+    startX: 0,
+    startY: 0
+  },
+  drag: {
+    active: false,
+    model: null,
+    piece: null,
+    plane: null,
+    offset: null,
+    pointerId: null,
+    moved: false,
     startX: 0,
     startY: 0
   }
@@ -232,6 +294,7 @@ function init() {
   render2d();
   initThree();
   updateAll();
+  installDebugApi();
 }
 
 function applyUrlPreset() {
@@ -246,15 +309,14 @@ function applyUrlPreset() {
     ].forEach(([productId, x, y]) => {
       const product = state.catalog.find((item) => item.id === productId);
       if (!product) return;
-      state.placed.push({
-        ...product,
-        id: `${product.id}-demo-${state.placed.length}`,
-        productId,
-        x,
-        y,
-        face: "front",
-        rotation: 0
-      });
+      const pieces = createPlacedPieces(product).map((piece, index) => ({
+        ...piece,
+        id: `${piece.productId}-demo-${state.placed.length}-${index}`,
+        x: clamp(x + Number(product.packageParts?.[index]?.offsetX || 0), 0, Math.max(0, state.wall.width - piece.width)),
+        y: clamp(y + Number(product.packageParts?.[index]?.offsetY || 0), 0, Math.max(0, state.wall.height - piece.height)),
+        face: "front"
+      }));
+      state.placed.push(...pieces);
     });
   }
   const view = params.get("view");
@@ -285,6 +347,8 @@ function bindElements() {
     "cornerStrip",
     "catGhost",
     "catRunner",
+    "threeStage",
+    "threeImageLayer",
     "threeCanvas",
     "wallLabel",
     "stageHint",
@@ -296,6 +360,8 @@ function bindElements() {
     "wallWidth",
     "wallHeight",
     "wallDepth",
+    "wallColor",
+    "wallMaterial",
     "cornerEnabled",
     "cornerDepth",
     "cornerDepthField",
@@ -359,6 +425,16 @@ function bindEvents() {
     });
   });
 
+  els.wallColor.addEventListener("input", () => {
+    state.wall.color = normalizeColor(els.wallColor.value, "#f0eadc");
+    updateAll();
+  });
+
+  els.wallMaterial.addEventListener("change", () => {
+    state.wall.material = els.wallMaterial.value;
+    updateAll();
+  });
+
   els.cornerEnabled.addEventListener("change", () => {
     state.wall.corner = els.cornerEnabled.checked;
     if (!state.wall.corner) {
@@ -395,13 +471,26 @@ function bindEvents() {
   els.importDesign.addEventListener("change", importDesign);
 
   els.threeCanvas.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0 && event.pointerType === "mouse") return;
+    event.preventDefault();
+    const hit = getPieceHitAtPointer(event);
+    if (hit) {
+      beginThreePieceDrag(event, hit);
+      return;
+    }
     three.orbit.dragging = true;
     three.orbit.startX = event.clientX;
     three.orbit.startY = event.clientY;
+    els.threeStage.classList.add("is-orbiting");
     els.threeCanvas.setPointerCapture(event.pointerId);
   });
   els.threeCanvas.addEventListener("pointermove", (event) => {
+    if (three.drag.active) {
+      moveThreePieceDrag(event);
+      return;
+    }
     if (!three.orbit.dragging) return;
+    event.preventDefault();
     const dx = event.clientX - three.orbit.startX;
     const dy = event.clientY - three.orbit.startY;
     three.orbit.startX = event.clientX;
@@ -411,12 +500,25 @@ function bindEvents() {
     updateCamera();
   });
   els.threeCanvas.addEventListener("pointerup", (event) => {
+    if (three.drag.active) {
+      finishThreePieceDrag(event);
+      return;
+    }
     three.orbit.dragging = false;
+    els.threeStage.classList.remove("is-orbiting");
     try {
       els.threeCanvas.releasePointerCapture(event.pointerId);
     } catch {
       // The pointer may already be released on touch browsers.
     }
+  });
+  els.threeCanvas.addEventListener("pointercancel", (event) => {
+    if (three.drag.active) {
+      finishThreePieceDrag(event);
+      return;
+    }
+    three.orbit.dragging = false;
+    els.threeStage.classList.remove("is-orbiting");
   });
   els.threeCanvas.addEventListener("wheel", (event) => {
     event.preventDefault();
@@ -437,7 +539,7 @@ function restoreState() {
     const saved = JSON.parse(raw);
     if (saved && Array.isArray(saved.placed)) {
       state.catalog = Array.isArray(saved.catalog) ? mergeCatalog(seedCatalog, saved.catalog) : [...seedCatalog];
-      state.placed = saved.placed;
+      state.placed = saved.placed.map(upgradePlacedPiece);
       state.wall = { ...state.wall, ...saved.wall };
       state.cat = { ...state.cat, ...saved.cat };
       state.mode = saved.mode === "3d" ? "3d" : "2d";
@@ -454,11 +556,25 @@ function mergeCatalog(base, extra) {
   return [...map.values()];
 }
 
+function upgradePlacedPiece(piece) {
+  const product = state.catalog.find((item) => item.id === piece.productId);
+  if (!product) return piece;
+  return {
+    ...piece,
+    imageUrl: piece.imageUrl || product.imageUrl,
+    assetUrl: piece.assetUrl || product.assetUrl,
+    source: piece.source || product.source,
+    url: piece.url || product.url
+  };
+}
+
 function syncInputs() {
   els.catalogSearch.value = state.search;
   els.wallWidth.value = state.wall.width;
   els.wallHeight.value = state.wall.height;
   els.wallDepth.value = state.wall.depth;
+  els.wallColor.value = normalizeColor(state.wall.color, "#f0eadc");
+  els.wallMaterial.value = state.wall.material || "paint";
   els.cornerEnabled.checked = state.wall.corner;
   els.cornerDepth.value = state.wall.cornerDepth;
   els.catLength.value = state.cat.length;
@@ -486,7 +602,7 @@ function renderCatalog() {
     const card = document.createElement("article");
     card.className = "catalog-card";
     card.innerHTML = `
-      <div class="mini-model" data-type="${escapeHtml(product.type)}" data-model="${escapeHtml(product.model || product.type)}" aria-hidden="true"></div>
+      ${renderCatalogThumb(product)}
       <div class="catalog-content">
         <h3 class="catalog-title">${escapeHtml(product.name)}</h3>
         <div class="catalog-meta">
@@ -499,6 +615,7 @@ function renderCatalog() {
           <span>${formatInches(product.depth)}D</span>
           <span>${formatInches(product.height)}H</span>
           <span>${escapeHtml(loadText)}</span>
+          ${product.packageParts ? `<span>${product.packageParts.length} movable parts</span>` : ""}
         </div>
         <div class="catalog-source">${escapeHtml(product.source)} item</div>
         <div class="catalog-actions">
@@ -512,22 +629,72 @@ function renderCatalog() {
   });
 }
 
+function renderCatalogThumb(product) {
+  const type = escapeAttribute(product.type);
+  const model = escapeAttribute(product.model || product.type);
+  if (!product.imageUrl) {
+    return `<div class="mini-model" data-type="${type}" data-model="${model}" aria-hidden="true"></div>`;
+  }
+  return `
+    <div class="mini-model has-photo" data-type="${type}" data-model="${model}" aria-hidden="true">
+      <img class="mini-photo" src="${escapeAttribute(product.imageUrl)}" alt="" loading="lazy" referrerpolicy="no-referrer">
+    </div>
+  `;
+}
+
 function addPiece(productId) {
   const product = state.catalog.find((item) => item.id === productId);
   if (!product) return;
-  const piece = {
-    ...product,
-    id: `${product.id}-${Date.now()}`,
-    productId,
-    x: clamp(24 + state.placed.length * 10, 0, Math.max(0, state.wall.width - product.width)),
-    y: clamp(18 + state.placed.length * 8, 0, Math.max(0, state.wall.height - product.height)),
-    face: product.type === "corner" && state.wall.corner ? "right" : "front",
-    rotation: 0
-  };
-  state.placed.push(piece);
-  state.selectedId = piece.id;
+  const pieces = createPlacedPieces(product);
+  state.placed.push(...pieces);
+  state.selectedId = pieces[0]?.id || null;
   updateAll();
-  showToast(`${product.name} added to the wall`);
+  showToast(product.packageParts ? `${product.name} added as ${pieces.length} movable pieces` : `${product.name} added to the wall`);
+}
+
+function createPlacedPieces(product) {
+  const parts = Array.isArray(product.packageParts) && product.packageParts.length ? product.packageParts : [null];
+  const batchId = `${product.id}-${Date.now()}`;
+  const baseX = clamp(24 + state.placed.length * 6, 0, Math.max(0, state.wall.width - product.width));
+  const baseY = clamp(18 + state.placed.length * 5, 0, Math.max(0, state.wall.height - product.height));
+  return parts.map((part, index) => {
+    const source = part || product;
+    const piece = {
+      ...product,
+      ...source,
+      id: parts.length > 1 ? `${batchId}-part-${index + 1}` : batchId,
+      productId: product.id,
+      packageId: parts.length > 1 ? batchId : "",
+      packageName: parts.length > 1 ? product.name : "",
+      packagePartIndex: parts.length > 1 ? index + 1 : 0,
+      price: parts.length > 1 ? splitPackagePrice(product.price, parts.length, index) : product.price,
+      rating: product.rating,
+      reviews: product.reviews,
+      source: product.source,
+      sourceChecked: product.sourceChecked,
+      sourceUrl: product.url,
+      url: product.url,
+      imageUrl: source.imageUrl || product.imageUrl,
+      assetUrl: source.assetUrl || product.assetUrl,
+      maxLoad: source.maxLoad ?? product.maxLoad,
+      material: source.material || product.material,
+      x: clamp(baseX + Number(source.offsetX || 0), 0, Math.max(0, state.wall.width - source.width)),
+      y: clamp(baseY + Number(source.offsetY || 0), 0, Math.max(0, state.wall.height - source.height)),
+      face: source.type === "corner" && state.wall.corner ? "right" : "front",
+      rotation: 0
+    };
+    delete piece.packageParts;
+    delete piece.offsetX;
+    delete piece.offsetY;
+    return piece;
+  });
+}
+
+function splitPackagePrice(total, count, index) {
+  const cents = Math.round(Number(total || 0) * 100);
+  const base = Math.floor(cents / count);
+  const remainder = cents - base * count;
+  return (base + (index < remainder ? 1 : 0)) / 100;
 }
 
 function hydrateImportFromUrl() {
@@ -619,7 +786,7 @@ function setMode(mode) {
   els.mode3d.setAttribute("aria-selected", String(mode === "3d"));
   els.stageHint.textContent = mode === "2d"
     ? "Drag pieces to place them. Select a piece to edit exact dimensions."
-    : "Drag the preview to orbit. Scroll to zoom. Select pieces in 2D to edit.";
+    : "Drag pieces to move them. Drag empty space to orbit. Scroll to zoom.";
   resizeThree();
   saveState(false);
 }
@@ -639,6 +806,10 @@ function syncDynamicInputs() {
   els.wallLabel.textContent = `${formatFeet(state.wall.width)} x ${formatFeet(state.wall.height)} wall`;
   els.cornerDepthField.hidden = !state.wall.corner;
   els.cornerStrip.classList.toggle("is-visible", state.wall.corner);
+  state.wall.color = normalizeColor(state.wall.color, "#f0eadc");
+  state.wall.material = state.wall.material || "paint";
+  els.wall2d.dataset.material = state.wall.material;
+  document.documentElement.style.setProperty("--wall-color", state.wall.color);
   document.documentElement.style.setProperty("--cat-w", `${Math.max(42, state.cat.length * 3)}px`);
   document.documentElement.style.setProperty("--cat-h", `${Math.max(22, state.cat.height * 3)}px`);
   if (state.wall.photoDataUrl) {
@@ -735,7 +906,7 @@ function movePieceDrag(event) {
   const dx = ((event.clientX - dragState.startX) / bounds.width) * state.wall.width;
   const dy = (-(event.clientY - dragState.startY) / bounds.height) * state.wall.height;
   dragState.moved = dragState.moved || Math.abs(event.clientX - dragState.startX) > 2 || Math.abs(event.clientY - dragState.startY) > 2;
-  piece.x = clamp(Math.round(dragState.originX + dx), 0, Math.max(0, state.wall.width - piece.width));
+  piece.x = clamp(Math.round(dragState.originX + dx), 0, getPieceMaxX(piece));
   piece.y = clamp(Math.round(dragState.originY + dy), 0, Math.max(0, state.wall.height - piece.height));
   applyPiece2dStyle(node, piece, bounds);
   updateSelectedPositionFields(piece);
@@ -764,6 +935,116 @@ function finishPieceDrag(event) {
   dragState.piece = null;
   dragState.bounds = null;
   dragState.pointerId = null;
+  updateAll();
+}
+
+function getCanvasPointer(event) {
+  const rect = els.threeCanvas.getBoundingClientRect();
+  if (!rect.width || !rect.height) return false;
+  three.pointer.set(
+    ((event.clientX - rect.left) / rect.width) * 2 - 1,
+    -((event.clientY - rect.top) / rect.height) * 2 + 1
+  );
+  return true;
+}
+
+function getPieceHitAtPointer(event) {
+  if (!three.ready || !three.raycaster || !getCanvasPointer(event)) return null;
+  three.raycaster.setFromCamera(three.pointer, three.camera);
+  const hits = three.raycaster.intersectObjects(three.piecesGroup.children, true);
+  for (const hit of hits) {
+    const model = findPieceModel(hit.object);
+    if (model) return { model, point: hit.point.clone() };
+  }
+  return null;
+}
+
+function findPieceModel(object) {
+  let current = object;
+  while (current && current !== three.piecesGroup) {
+    if (current.userData?.pieceId) return current;
+    current = current.parent;
+  }
+  return null;
+}
+
+function beginThreePieceDrag(event, hit) {
+  const pieceId = hit.model.userData.pieceId;
+  const piece = state.placed.find((item) => item.id === pieceId);
+  if (!piece) return;
+
+  const planeNormal = piece.face === "right" && state.wall.corner
+    ? new THREE.Vector3(1, 0, 0)
+    : new THREE.Vector3(0, 0, 1);
+  const planeConstant = piece.face === "right" && state.wall.corner
+    ? -hit.model.position.x
+    : -hit.model.position.z;
+
+  three.drag.active = true;
+  three.drag.model = hit.model;
+  three.drag.piece = piece;
+  three.drag.plane = new THREE.Plane(planeNormal, planeConstant);
+  three.drag.offset = hit.point.sub(hit.model.position);
+  three.drag.pointerId = event.pointerId;
+  three.drag.moved = false;
+  three.drag.startX = event.clientX;
+  three.drag.startY = event.clientY;
+  three.orbit.dragging = false;
+
+  state.selectedId = piece.id;
+  renderSelected();
+  els.threeStage.classList.add("is-dragging");
+  els.threeStage.classList.remove("is-orbiting");
+
+  try {
+    els.threeCanvas.setPointerCapture(event.pointerId);
+  } catch {
+    // Pointer capture is best-effort on some touch browsers.
+  }
+}
+
+function moveThreePieceDrag(event) {
+  if (!three.drag.active || (three.drag.pointerId !== null && event.pointerId !== three.drag.pointerId)) return;
+  event.preventDefault();
+  if (!getCanvasPointer(event)) return;
+  three.raycaster.setFromCamera(three.pointer, three.camera);
+  const point = new THREE.Vector3();
+  if (!three.raycaster.ray.intersectPlane(three.drag.plane, point)) return;
+
+  const piece = three.drag.piece;
+  const center = point.sub(three.drag.offset);
+  if (piece.face === "right" && state.wall.corner) {
+    piece.x = clamp(Math.round(center.z - piece.width / 2), 0, getPieceMaxX(piece));
+    piece.y = clamp(Math.round(center.y - piece.height / 2), 0, Math.max(0, state.wall.height - piece.height));
+  } else {
+    piece.x = clamp(Math.round(center.x - piece.width / 2), 0, getPieceMaxX(piece));
+    piece.y = clamp(Math.round(center.y - piece.height / 2), 0, Math.max(0, state.wall.height - piece.height));
+  }
+  three.drag.moved = three.drag.moved
+    || Math.abs(event.clientX - three.drag.startX) > 2
+    || Math.abs(event.clientY - three.drag.startY) > 2;
+  positionPieceModel(three.drag.model, piece);
+  updateSelectedPositionFields(piece);
+}
+
+function finishThreePieceDrag(event) {
+  if (!three.drag.active || (three.drag.pointerId !== null && event.pointerId !== three.drag.pointerId)) return;
+  event.preventDefault();
+  const moved = three.drag.moved;
+  try {
+    els.threeCanvas.releasePointerCapture(event.pointerId);
+  } catch {
+    // Some browsers release automatically.
+  }
+  els.threeStage.classList.remove("is-dragging");
+  three.drag.active = false;
+  three.drag.model = null;
+  three.drag.piece = null;
+  three.drag.plane = null;
+  three.drag.offset = null;
+  three.drag.pointerId = null;
+  three.drag.moved = false;
+  if (moved) showToast("Piece moved");
   updateAll();
 }
 
@@ -811,10 +1092,11 @@ function updateSelectedFromControls() {
   const piece = getSelectedPiece();
   if (!piece) return;
   piece.name = els.selectedName.value;
-  piece.x = clampNumber(els.selectedX.value, 0, Math.max(0, state.wall.width - piece.width));
+  piece.x = clampNumber(els.selectedX.value, 0, getPieceMaxX(piece));
   piece.y = clampNumber(els.selectedY.value, 0, Math.max(0, state.wall.height - piece.height));
   piece.price = clampNumber(els.selectedPrice.value, 0, 5000);
   piece.face = state.wall.corner ? els.selectedFace.value : "front";
+  piece.x = clamp(piece.x, 0, getPieceMaxX(piece));
   piece.rotation = Number(els.selectedRotation.value);
   updateAll();
 }
@@ -993,7 +1275,8 @@ function initThree() {
   three.renderer = new THREE.WebGLRenderer({
     canvas: els.threeCanvas,
     antialias: true,
-    alpha: true
+    alpha: false,
+    preserveDrawingBuffer: true
   });
   three.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   three.renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -1002,6 +1285,12 @@ function initThree() {
   three.scene = new THREE.Scene();
   three.scene.background = new THREE.Color(0xdfe6e0);
   three.camera = new THREE.PerspectiveCamera(38, 1, 1, 1200);
+  three.raycaster = new THREE.Raycaster();
+  three.pointer = new THREE.Vector2();
+  three.imageNodes = new Map();
+  three.textureLoader = new THREE.TextureLoader();
+  three.productTextures = new Map();
+  three.wallTextureCache = new Map();
   three.wallGroup = new THREE.Group();
   three.piecesGroup = new THREE.Group();
   three.catGroup = buildCatModel();
@@ -1030,9 +1319,84 @@ function buildTextures() {
     wood: makeTexture("#9b6337", "#d8a76b", 160, "wood"),
     carpet: makeTexture("#8f9b88", "#dbe1d2", 90, "noise"),
     sisal: makeTexture("#c89e61", "#f1d7a5", 120, "stripe"),
-    canvas: makeTexture("#657c52", "#9eb48d", 120, "canvas"),
-    wall: makeTexture("#e7dfd0", "#f8f4ea", 180, "wall")
+    canvas: makeTexture("#657c52", "#9eb48d", 120, "canvas")
   };
+}
+
+function getWallTexture() {
+  const material = state.wall.material || "paint";
+  const color = normalizeColor(state.wall.color, "#f0eadc");
+  const key = `${material}:${color}`;
+  if (three.wallTextureCache.has(key)) return three.wallTextureCache.get(key);
+
+  const light = shadeColor(color, 24);
+  const dark = shadeColor(color, -18);
+  const texture = makeWallFinishTexture(color, light, dark, material);
+  three.wallTextureCache.set(key, texture);
+  return texture;
+}
+
+function getWallRoughness(material) {
+  return {
+    paint: 0.76,
+    plaster: 0.94,
+    brick: 0.9,
+    "wood-panel": 0.68,
+    concrete: 0.96
+  }[material] || 0.82;
+}
+
+function makeWallFinishTexture(color, light, dark, material) {
+  const size = 192;
+  const canvas = document.createElement("canvas");
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = color;
+  ctx.fillRect(0, 0, size, size);
+  ctx.globalAlpha = 0.55;
+
+  if (material === "brick") {
+    ctx.strokeStyle = "rgba(255,255,255,0.42)";
+    ctx.lineWidth = 3;
+    for (let y = 0; y <= size; y += 32) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(size, y);
+      ctx.stroke();
+      for (let x = (y / 32) % 2 ? 0 : 32; x <= size; x += 64) {
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x, y + 32);
+        ctx.stroke();
+      }
+    }
+  } else if (material === "wood-panel") {
+    for (let x = 0; x < size; x += 28) {
+      ctx.fillStyle = x % 56 ? "rgba(122,79,47,0.2)" : "rgba(255,255,255,0.16)";
+      ctx.fillRect(x, 0, 3, size);
+    }
+    for (let i = 0; i < 80; i += 1) {
+      ctx.fillStyle = i % 2 ? light : dark;
+      ctx.fillRect(Math.random() * size, Math.random() * size, Math.random() * 44 + 8, 1);
+    }
+  } else {
+    const speckCount = material === "paint" ? 80 : 180;
+    for (let i = 0; i < speckCount; i += 1) {
+      ctx.fillStyle = i % 2 ? light : dark;
+      const radius = material === "concrete" ? Math.random() * 1.6 + 0.4 : Math.random() * 1.1 + 0.2;
+      ctx.beginPath();
+      ctx.arc(Math.random() * size, Math.random() * size, radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
+  texture.repeat.set(material === "brick" ? 2.6 : 2, material === "wood-panel" ? 1.2 : 2);
+  return texture;
 }
 
 function makeTexture(colorA, colorB, size, type) {
@@ -1095,10 +1459,10 @@ function updateThreeScene() {
   clearGroup(three.piecesGroup);
 
   const wallMaterial = new THREE.MeshStandardMaterial({
-    color: 0xf0eadc,
-    roughness: 0.86,
+    color: new THREE.Color(state.wall.color),
+    roughness: getWallRoughness(state.wall.material),
     metalness: 0.02,
-    map: three.textures.wall
+    map: getWallTexture()
   });
   const wall = new THREE.Mesh(new THREE.BoxGeometry(state.wall.width, state.wall.height, 2), wallMaterial);
   wall.position.set(state.wall.width / 2, state.wall.height / 2, -1);
@@ -1128,15 +1492,7 @@ function updateThreeScene() {
 
   state.placed.forEach((piece) => {
     const model = buildPieceModel(piece);
-    const centerX = piece.x + piece.width / 2;
-    const centerY = piece.y + piece.height / 2;
-    if (piece.face === "right" && state.wall.corner) {
-      model.position.set(state.wall.width + piece.depth / 2, centerY, piece.x + piece.width / 2);
-      model.rotation.y = Math.PI / 2;
-    } else {
-      model.position.set(centerX, centerY, piece.depth / 2);
-    }
-    model.rotation.z = THREE.MathUtils.degToRad(piece.rotation);
+    positionPieceModel(model, piece);
     if (piece.id === state.selectedId) addSelectionRing(model, piece);
     if (warnings.has(piece.id)) addWarningMarker(model, piece);
     if (reachable.has(piece.id)) addReachGlow(model, piece);
@@ -1145,6 +1501,109 @@ function updateThreeScene() {
 
   updateCatModel();
   updateCamera();
+  syncThreeImageLayer();
+}
+
+function syncThreeImageLayer() {
+  if (!els.threeImageLayer || !three.ready) return;
+  if (state.mode !== "3d") {
+    els.threeImageLayer.hidden = true;
+    return;
+  }
+  els.threeImageLayer.hidden = false;
+  const rect = els.threeCanvas.getBoundingClientRect();
+  if (!rect.width || !rect.height) return;
+
+  const activeIds = new Set();
+  const models = new Map(three.piecesGroup.children.map((model) => [model.userData?.pieceId, model]));
+  state.placed.forEach((piece) => {
+    if (!piece.imageUrl || piece.assetUrl) return;
+    const model = models.get(piece.id);
+    if (!model) return;
+    const focusY = clamp(piece.height * 0.08, -piece.height / 2, piece.height / 2);
+    const center = projectLocalToLayer(model, new THREE.Vector3(0, focusY, piece.depth / 2), rect);
+    if (!center || center.z < -1 || center.z > 1) {
+      const hiddenNode = three.imageNodes.get(piece.id);
+      if (hiddenNode) hiddenNode.hidden = true;
+      return;
+    }
+
+    const widthPx = clamp(
+      projectedLocalDistance(
+        model,
+        new THREE.Vector3(-piece.width / 2, focusY, piece.depth / 2),
+        new THREE.Vector3(piece.width / 2, focusY, piece.depth / 2),
+        rect
+      ),
+      44,
+      168
+    );
+    const heightPx = clamp(
+      Math.max(
+        widthPx * 0.62,
+        projectedLocalDistance(
+          model,
+          new THREE.Vector3(0, -piece.height / 2, piece.depth / 2),
+          new THREE.Vector3(0, piece.height / 2, piece.depth / 2),
+          rect
+        )
+      ),
+      32,
+      124
+    );
+
+    let node = three.imageNodes.get(piece.id);
+    if (!node) {
+      node = document.createElement("img");
+      node.className = "model-photo-card";
+      node.alt = "";
+      node.decoding = "async";
+      node.loading = "eager";
+      node.referrerPolicy = "no-referrer";
+      three.imageNodes.set(piece.id, node);
+      els.threeImageLayer.appendChild(node);
+    }
+    if (node.src !== piece.imageUrl) node.src = piece.imageUrl;
+    node.hidden = false;
+    node.style.width = `${Math.round(widthPx)}px`;
+    node.style.height = `${Math.round(heightPx)}px`;
+    node.style.transform = `translate(${Math.round(center.x - widthPx / 2)}px, ${Math.round(center.y - heightPx / 2)}px)`;
+    node.style.zIndex = String(Math.round(1000 - center.z * 400));
+    activeIds.add(piece.id);
+  });
+
+  three.imageNodes.forEach((node, id) => {
+    if (activeIds.has(id)) return;
+    node.remove();
+    three.imageNodes.delete(id);
+  });
+}
+
+function projectLocalToLayer(model, localPoint, rect) {
+  const projected = model.localToWorld(localPoint.clone()).project(three.camera);
+  return {
+    x: ((projected.x + 1) / 2) * rect.width,
+    y: ((-projected.y + 1) / 2) * rect.height,
+    z: projected.z
+  };
+}
+
+function projectedLocalDistance(model, localA, localB, rect) {
+  const pointA = projectLocalToLayer(model, localA, rect);
+  const pointB = projectLocalToLayer(model, localB, rect);
+  return Math.hypot(pointA.x - pointB.x, pointA.y - pointB.y);
+}
+
+function positionPieceModel(model, piece) {
+  const centerX = piece.x + piece.width / 2;
+  const centerY = piece.y + piece.height / 2;
+  model.rotation.set(0, 0, THREE.MathUtils.degToRad(piece.rotation));
+  if (piece.face === "right" && state.wall.corner) {
+    model.position.set(state.wall.width + piece.depth / 2, centerY, centerX);
+    model.rotation.y = Math.PI / 2;
+  } else {
+    model.position.set(centerX, centerY, piece.depth / 2);
+  }
 }
 
 function addGridLines() {
@@ -1193,14 +1652,26 @@ function buildPieceModel(piece) {
     buildFriscoAcrylicBowl(group, piece, materials);
   } else if (profile === "frisco-silhouette-bridge") {
     buildFriscoSilhouetteBridge(group, piece, materials);
+  } else if (profile === "frisco-silhouette-cubby") {
+    buildFriscoSilhouetteCubby(group, piece, materials);
+  } else if (profile === "frisco-silhouette-bridge-span") {
+    buildFriscoSilhouetteBridgeSpan(group, piece, materials);
   } else if (profile === "frisco-four-steps") {
     buildFriscoFourSteps(group, piece, materials);
+  } else if (profile === "frisco-single-step") {
+    buildSingleStep(group, piece, materials);
   } else if (profile === "lotus-leaf") {
     buildLotusLeafShelf(group, piece, materials);
   } else if (profile === "armarkat-two-level") {
     buildArmarkatTwoLevel(group, piece, materials);
+  } else if (profile === "armarkat-single-shelf") {
+    buildArmarkatSingleShelf(group, piece, materials);
   } else if (profile === "pawhut-10-level") {
     buildPawhutTenLevel(group, piece, materials);
+  } else if (profile === "pawhut-house") {
+    buildPawhutHouse(group, piece, materials);
+  } else if (profile === "pawhut-step") {
+    buildPawhutStep(group, piece, materials);
   } else if (profile === "trixie-post-perch") {
     buildTrixiePostPerch(group, piece, materials);
   } else if (piece.type === "bridge") {
@@ -1267,8 +1738,67 @@ function buildPieceModel(piece) {
     addBrackets(group, piece, darkWood);
   }
 
+  addProductTextureSurfaces(group, piece);
   group.userData.pieceId = piece.id;
   return group;
+}
+
+function requestProductTexture(piece) {
+  if (!piece.assetUrl || !three.textureLoader) return null;
+  const cached = three.productTextures.get(piece.assetUrl);
+  if (cached instanceof THREE.Texture) return cached;
+  if (cached === "loading" || cached === null) return null;
+
+  three.productTextures.set(piece.assetUrl, "loading");
+  three.textureLoader.load(
+    piece.assetUrl,
+    (texture) => {
+      texture.colorSpace = THREE.SRGBColorSpace;
+      texture.wrapS = THREE.ClampToEdgeWrapping;
+      texture.wrapT = THREE.ClampToEdgeWrapping;
+      texture.anisotropy = three.renderer?.capabilities?.getMaxAnisotropy?.() || 1;
+      three.productTextures.set(piece.assetUrl, texture);
+      if (!three.drag.active) updateThreeScene();
+    },
+    undefined,
+    () => {
+      three.productTextures.set(piece.assetUrl, null);
+    }
+  );
+  return null;
+}
+
+function addProductTextureSurfaces(group, piece) {
+  const texture = requestProductTexture(piece);
+  if (!texture) return;
+
+  const aspect = texture.image?.width && texture.image?.height ? texture.image.width / texture.image.height : 1;
+  const material = new THREE.MeshBasicMaterial({
+    map: texture,
+    side: THREE.DoubleSide,
+    transparent: true,
+    opacity: 0.96,
+    polygonOffset: true,
+    polygonOffsetFactor: -2
+  });
+
+  const frontWidth = clamp(piece.width * 0.92, 6, 34);
+  const frontHeight = clamp(frontWidth / aspect, 4, Math.max(8, piece.height * 0.82));
+  const front = new THREE.Mesh(new THREE.PlaneGeometry(frontWidth, frontHeight), material);
+  front.name = "product-texture-front";
+  front.position.set(0, clamp(piece.height * 0.08, -piece.height / 2, piece.height / 2), piece.depth / 2 + 0.86);
+  group.add(front);
+
+  if (piece.depth >= 6 && piece.height < 18) {
+    const top = new THREE.Mesh(
+      new THREE.PlaneGeometry(clamp(piece.width * 0.82, 5, 28), clamp(piece.depth * 0.7, 4, 16)),
+      material.clone()
+    );
+    top.name = "product-texture-top";
+    top.rotation.x = -Math.PI / 2;
+    top.position.set(0, piece.height / 2 + 0.72, 0);
+    group.add(top);
+  }
 }
 
 function buildFriscoCushionedShelf(group, piece, materials) {
@@ -1325,6 +1855,21 @@ function buildFriscoSilhouetteBridge(group, piece, materials) {
   addBridgeRibs(group, bridgeLength, piece.depth * 0.72, -piece.height * 0.16, materials.darkWood);
 }
 
+function buildFriscoSilhouetteCubby(group, piece, materials) {
+  const cubby = new THREE.Mesh(new THREE.BoxGeometry(piece.width, piece.height, piece.depth), materials.wood);
+  const mat = new THREE.Mesh(new THREE.BoxGeometry(piece.width * 0.72, 1.1, piece.depth * 0.68), materials.sisal);
+  mat.position.y = piece.height / 2 + 0.2;
+  group.add(cubby, mat);
+  addCatOpening(group, 0, 0, piece.depth / 2 + 0.7, Math.min(piece.width, piece.height) * 0.22, materials.black);
+}
+
+function buildFriscoSilhouetteBridgeSpan(group, piece, materials) {
+  const bridge = new THREE.Mesh(new THREE.BoxGeometry(piece.width, Math.max(1.8, piece.height * 0.38), piece.depth), materials.canvas);
+  bridge.position.y = -piece.height * 0.16;
+  group.add(bridge);
+  addBridgeRibs(group, piece.width, piece.depth, bridge.position.y, materials.darkWood);
+}
+
 function buildFriscoFourSteps(group, piece, materials) {
   const stepWidth = Math.max(7, piece.width / 4.3);
   const stepHeight = 2.2;
@@ -1341,6 +1886,14 @@ function buildFriscoFourSteps(group, piece, materials) {
     mat.position.set(step.position.x, step.position.y + stepHeight / 2 + 0.45, 0);
     group.add(step, mat);
   });
+}
+
+function buildSingleStep(group, piece, materials) {
+  const step = new THREE.Mesh(new THREE.BoxGeometry(piece.width, piece.height, piece.depth), materials.wood);
+  const mat = new THREE.Mesh(new THREE.BoxGeometry(piece.width * 0.78, 0.65, piece.depth * 0.72), materials.sisal);
+  mat.position.y = piece.height / 2 + 0.4;
+  group.add(step, mat);
+  addBrackets(group, piece, materials.darkWood);
 }
 
 function buildLotusLeafShelf(group, piece, materials) {
@@ -1375,6 +1928,14 @@ function buildArmarkatTwoLevel(group, piece, materials) {
   group.add(lower, upper, postA, postB, matA, matB);
 }
 
+function buildArmarkatSingleShelf(group, piece, materials) {
+  const shelf = new THREE.Mesh(new THREE.BoxGeometry(piece.width, piece.height, piece.depth), materials.wood);
+  const mat = new THREE.Mesh(new THREE.BoxGeometry(piece.width * 0.76, 0.75, piece.depth * 0.68), materials.carpet);
+  mat.position.y = piece.height / 2 + 0.42;
+  group.add(shelf, mat);
+  addBrackets(group, piece, materials.darkWood);
+}
+
 function buildPawhutTenLevel(group, piece, materials) {
   const house = new THREE.Mesh(new THREE.BoxGeometry(piece.width * 0.72, piece.height * 0.5, piece.depth * 0.86), materials.wood);
   house.position.set(piece.width * 0.08, -piece.height * 0.2, 0);
@@ -1388,6 +1949,22 @@ function buildPawhutTenLevel(group, piece, materials) {
     pad.position.set(step.position.x, step.position.y + 1.05, 0);
     group.add(step, pad);
   }
+}
+
+function buildPawhutHouse(group, piece, materials) {
+  const house = new THREE.Mesh(new THREE.BoxGeometry(piece.width, piece.height, piece.depth), materials.wood);
+  const roof = new THREE.Mesh(new THREE.BoxGeometry(piece.width * 1.08, 1.4, piece.depth * 1.02), materials.carpet);
+  roof.position.y = piece.height / 2 + 0.75;
+  group.add(house, roof);
+  addCatOpening(group, 0, -piece.height * 0.04, piece.depth / 2 + 0.72, Math.min(piece.width, piece.height) * 0.18, materials.black);
+}
+
+function buildPawhutStep(group, piece, materials) {
+  const step = new THREE.Mesh(new THREE.BoxGeometry(piece.width, piece.height, piece.depth), materials.wood);
+  const pad = new THREE.Mesh(new THREE.BoxGeometry(piece.width * 0.82, 0.55, piece.depth * 0.68), materials.carpet);
+  pad.position.y = piece.height / 2 + 0.36;
+  group.add(step, pad);
+  addBrackets(group, piece, materials.darkWood);
 }
 
 function buildTrixiePostPerch(group, piece, materials) {
@@ -1525,6 +2102,7 @@ function animate() {
   if (!three.ready) return;
   if (state.mode === "3d") {
     three.catGroup.rotation.y = Math.sin(performance.now() * 0.0012) * 0.08;
+    syncThreeImageLayer();
   }
   three.renderer.render(three.scene, three.camera);
 }
@@ -1541,10 +2119,15 @@ function clearGroup(group) {
 
 function constrainPlacedPieces() {
   state.placed.forEach((piece) => {
-    piece.x = clamp(Number(piece.x) || 0, 0, Math.max(0, state.wall.width - piece.width));
-    piece.y = clamp(Number(piece.y) || 0, 0, Math.max(0, state.wall.height - piece.height));
     if (!state.wall.corner && piece.face === "right") piece.face = "front";
+    piece.x = clamp(Number(piece.x) || 0, 0, getPieceMaxX(piece));
+    piece.y = clamp(Number(piece.y) || 0, 0, Math.max(0, state.wall.height - piece.height));
   });
+}
+
+function getPieceMaxX(piece) {
+  const wallSpan = piece.face === "right" && state.wall.corner ? state.wall.cornerDepth : state.wall.width;
+  return Math.max(0, wallSpan - piece.width);
 }
 
 function saveState(show = true) {
@@ -1584,7 +2167,7 @@ function importDesign() {
     try {
       const payload = JSON.parse(String(reader.result));
       state.catalog = mergeCatalog(seedCatalog, payload.catalog || []);
-      state.placed = Array.isArray(payload.placed) ? payload.placed : [];
+      state.placed = Array.isArray(payload.placed) ? payload.placed.map(upgradePlacedPiece) : [];
       state.wall = { ...state.wall, ...payload.wall };
       state.cat = { ...state.cat, ...payload.cat };
       state.selectedId = null;
@@ -1625,6 +2208,20 @@ function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
 
+function normalizeColor(value, fallback) {
+  const color = String(value || "").trim();
+  return /^#[0-9a-f]{6}$/i.test(color) ? color : fallback;
+}
+
+function shadeColor(color, amount) {
+  const normalized = normalizeColor(color, "#f0eadc").slice(1);
+  const channels = [0, 2, 4].map((index) => {
+    const value = parseInt(normalized.slice(index, index + 2), 16);
+    return clamp(value + amount, 0, 255).toString(16).padStart(2, "0");
+  });
+  return `#${channels.join("")}`;
+}
+
 function formatFeet(inches) {
   const feet = Math.floor(inches / 12);
   const remainder = inches % 12;
@@ -1659,6 +2256,47 @@ function safeUrlHost(value) {
   } catch {
     return "";
   }
+}
+
+function installDebugApi() {
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has("debug")) return;
+  window.catWallDesignerDebug = {
+    placed: () => state.placed.map((piece) => ({
+      id: piece.id,
+      name: piece.name,
+      shortName: piece.shortName,
+      x: piece.x,
+      y: piece.y,
+      face: piece.face
+    })),
+    projectPiece: (query) => {
+      if (!three.ready) return null;
+      const piece = state.placed.find((item) => item.id === query || item.shortName === query || item.name.includes(query));
+      if (!piece) return null;
+      const model = three.piecesGroup.children.find((child) => child.userData?.pieceId === piece.id);
+      if (!model) return null;
+      const rect = els.threeCanvas.getBoundingClientRect();
+      const vector = model.position.clone().project(three.camera);
+      return {
+        id: piece.id,
+        x: rect.left + ((vector.x + 1) / 2) * rect.width,
+        y: rect.top + ((-vector.y + 1) / 2) * rect.height
+      };
+    },
+    modelStats: () => ({
+      placed: state.placed.length,
+      texturePlanes: three.piecesGroup.children.reduce((sum, model) => {
+        let count = 0;
+        model.traverse((object) => {
+          if (object.name === "product-texture-front" || object.name === "product-texture-top") count += 1;
+        });
+        return sum + count;
+      }, 0),
+      fallbackCards: document.querySelectorAll(".model-photo-card:not([hidden])").length,
+      wall: { ...state.wall }
+    })
+  };
 }
 
 function escapeHtml(value) {

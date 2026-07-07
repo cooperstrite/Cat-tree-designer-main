@@ -153,7 +153,8 @@
               </div>
               <div class="three-stage" id="threeStage">
                 <canvas id="threeCanvas" aria-label="3D wall preview"></canvas>
-                <div class="canvas-help">Drag to orbit. Scroll to zoom.</div>
+                <div class="three-image-layer" id="threeImageLayer" aria-hidden="true"></div>
+                <div class="canvas-help">Drag pieces to move. Drag empty space to orbit.</div>
               </div>
             </div>
           </div>
@@ -198,6 +199,22 @@
               <label class="field">
                 <span>Depth</span>
                 <input id="wallDepth" type="number" min="12" max="180" step="1">
+              </label>
+            </div>
+            <div class="finish-row">
+              <label class="field">
+                <span>Color</span>
+                <input id="wallColor" type="color" value="#f0eadc">
+              </label>
+              <label class="field">
+                <span>Material</span>
+                <select id="wallMaterial">
+                  <option value="paint">Paint</option>
+                  <option value="plaster">Plaster</option>
+                  <option value="brick">Brick</option>
+                  <option value="wood-panel">Wood panel</option>
+                  <option value="concrete">Concrete</option>
+                </select>
               </label>
             </div>
             <label class="toggle-row">
