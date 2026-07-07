@@ -3,8 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Design and price a custom cat wall with 2D planning, 3D preview, cat sizing, and static product imports.">
-    <title>Cat Wall Designer</title>
+    <meta name="description" content="Catify is a free tool to design, price, and preview a custom cat wall with 2D planning, a 3D preview, cat sizing, and product imports.">
+    <title>Catify — Design &amp; Price Your Cat Wall</title>
+    <meta name="theme-color" content="#0f272a">
+    <link rel="canonical" href="https://cooperstrite.github.io/Cat-tree-designer-main/">
+
+    <!-- Favicon / URL logo -->
+    <link rel="icon" type="image/png" href="assets/products/assets/Catify.png">
+    <link rel="apple-touch-icon" href="assets/products/assets/Catify.png">
+
+    <!-- Open Graph (Google, Facebook, Slack, iMessage) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Catify">
+    <meta property="og:title" content="Catify — Design &amp; Price Your Cat Wall">
+    <meta property="og:description" content="Design, price, and preview a custom cat wall in 2D and 3D. Size it to your cat, import real products, and estimate cost.">
+    <meta property="og:url" content="https://cooperstrite.github.io/Cat-tree-designer-main/">
+    <meta property="og:image" content="https://cooperstrite.github.io/Cat-tree-designer-main/assets/products/assets/Catify.png">
+    <meta property="og:image:width" content="272">
+    <meta property="og:image:height" content="229">
+    <meta property="og:image:alt" content="Catify — a cat sitting on wall-mounted shelves">
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catify — Design &amp; Price Your Cat Wall">
+    <meta name="twitter:description" content="Design, price, and preview a custom cat wall in 2D and 3D.">
+    <meta name="twitter:image" content="https://cooperstrite.github.io/Cat-tree-designer-main/assets/products/assets/Catify.png">
+
     <link rel="stylesheet" href="styles.css">
     <script type="importmap">
       {
@@ -14,35 +38,175 @@
       }
     </script>
   </head>
-  <body>
+  <body data-step="home">
     <div class="app-shell">
       <header class="topbar">
-        <div>
-          <p class="eyebrow">GitHub Pages ready</p>
-          <h1>Cat Wall Designer</h1>
-        </div>
+        <a class="brand-lockup" href="#home" aria-label="Catify home">
+          <div class="brand-mark" aria-hidden="true">
+            <img class="brand-logo brand-logo-default" src="assets/products/assets/Catify.png" alt="">
+            <img class="brand-logo brand-logo-home" src="assets/products/assets/Catify%20no%20back.png" alt="">
+          </div>
+          <div>
+            <p class="eyebrow">Cat wall designer</p>
+            <h1>Catify</h1>
+            <p class="brand-subtitle">Design, price, and preview a custom wall route.</p>
+          </div>
+        </a>
         <div class="topbar-actions">
-          <button class="icon-button" id="saveDesign" type="button" title="Save design">
-            <span aria-hidden="true">S</span>
-            <span class="visually-hidden">Save design</span>
+          <button class="top-action-button" id="saveDesign" type="button">
+            Save
           </button>
-          <button class="icon-button" id="exportDesign" type="button" title="Export design">
-            <span aria-hidden="true">EX</span>
-            <span class="visually-hidden">Export design</span>
+          <button class="top-action-button" id="exportDesign" type="button">
+            Export
           </button>
-          <label class="file-button" title="Import design">
-            <span aria-hidden="true">IM</span>
-            <span class="visually-hidden">Import design</span>
+          <label class="top-action-button file-button">
+            Import
             <input id="importDesign" type="file" accept="application/json">
           </label>
         </div>
       </header>
 
+      <section class="home-page" id="homePage" aria-label="Catify overview">
+        <section class="home-hero" aria-labelledby="homeTitle">
+          <div class="home-hero-content">
+            <p class="home-kicker">Cat wall planning studio</p>
+            <h1 id="homeTitle">Catify</h1>
+            <p class="home-lede">Plan a cat wall before you buy. Build a route around your wall size, your cat's body size, your budget, and the real pieces you want to use.</p>
+            <p class="home-lede">Work In Progress</p>
+            <div class="home-actions">
+              <a class="primary-button home-action" href="#start" data-step-nav="start">Start Designing</a>
+              <a class="secondary-button home-action" href="#homeHow">See What It Does</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section" id="homeHow" aria-labelledby="homeHowTitle">
+          <div class="home-section-heading">
+            <p class="home-kicker">What the site does</p>
+            <h2 id="homeHowTitle">A planning tool for cat shelves, bridges, hideouts, and climbing routes.</h2>
+          </div>
+          <div class="home-feature-grid">
+            <article class="home-feature">
+              <strong>Design The Space</strong>
+              <p>Set wall dimensions, add corners, choose wall colors and materials, then place pieces on a scaled wall.</p>
+            </article>
+            <article class="home-feature">
+              <strong>Preview In 2D And 3D</strong>
+              <p>Switch between a clean layout view and a 3D room preview to judge spacing, depth, and visual balance.</p>
+            </article>
+            <article class="home-feature">
+              <strong>Price The Build</strong>
+              <p>Add catalog items, estimate hardware, track total cost, and compare the plan against your target budget.</p>
+            </article>
+            <article class="home-feature">
+              <strong>Import Product URLs</strong>
+              <p>Look up accessible product pages to fill price, rating, dimensions, and product images for generated models.</p>
+            </article>
+            <article class="home-feature">
+              <strong>Size Around Your Cat</strong>
+              <p>Adjust cat length, height, and weight so the route is checked against reach, landing room, and load assumptions.</p>
+            </article>
+            <article class="home-feature">
+              <strong>Review The Plan</strong>
+              <p>Get a summary of pieces, route measurements, warnings, and a shopping-style list before you install anything.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="home-band" aria-labelledby="homeFlowTitle">
+          <div>
+            <p class="home-kicker">Workflow</p>
+            <h2 id="homeFlowTitle">Start with a layout, tune the space, build the wall, then review the price.</h2>
+          </div>
+          <a class="primary-button home-action" href="#start" data-step-nav="start">Open The Designer</a>
+        </section>
+      </section>
+
+      <nav class="guide-strip" aria-label="Catify workflow">
+        <a href="#start" class="guide-card is-active" data-step-nav="start" aria-current="step">
+          <span class="guide-number">1</span>
+          <span>
+            <strong>Start</strong>
+            <small>Layout starter</small>
+          </span>
+        </a>
+        <a href="#tune" class="guide-card" data-step-nav="tune">
+          <span class="guide-number">2</span>
+          <span>
+            <strong>Tune</strong>
+            <small>Wall, cat, style</small>
+          </span>
+        </a>
+        <a href="#build" class="guide-card" data-step-nav="build">
+          <span class="guide-number">3</span>
+          <span>
+            <strong>Build</strong>
+            <small>Wall canvas</small>
+          </span>
+        </a>
+        <a href="#review" class="guide-card" data-step-nav="review">
+          <span class="guide-number">4</span>
+          <span>
+            <strong>Review</strong>
+            <small>Plan and price</small>
+          </span>
+        </a>
+      </nav>
+
+      <section class="step-pagebar" aria-live="polite">
+        <div>
+          <p class="step-kicker" id="stepKicker">Step 1 of 4</p>
+          <h2 id="stepTitle">Start with a layout</h2>
+          <p id="stepSubtitle">Pick a starter route to place a set of pieces — or skip ahead and add your own.</p>
+        </div>
+        <div class="step-actions">
+          <button class="secondary-button" id="prevStep" type="button">Back</button>
+          <button class="primary-button" id="nextStep" type="button">Next: Tune</button>
+        </div>
+      </section>
+
       <main class="workspace">
         <aside class="sidebar catalog-panel" aria-label="Catalog and product import">
-          <section class="panel-section">
+          <section class="panel-section start-panel" id="layoutStarters">
             <div class="section-heading">
-              <h2>Find Pieces</h2>
+              <h2>Start With A Layout</h2>
+              <span>editable</span>
+            </div>
+            <div class="preset-grid" role="group" aria-label="Apply layout starter">
+              <button class="preset-button" type="button" data-layout-preset="small-space">
+                <span class="preset-visual small-space" aria-hidden="true"></span>
+                <span>
+                  <strong>Small Space Climb</strong>
+                  <small>Steps, perch, bowl</small>
+                </span>
+              </button>
+              <button class="preset-button" type="button" data-layout-preset="wall-run">
+                <span class="preset-visual wall-run" aria-hidden="true"></span>
+                <span>
+                  <strong>Wall Run</strong>
+                  <small>Bridge, perch, post</small>
+                </span>
+              </button>
+              <button class="preset-button" type="button" data-layout-preset="multi-cat">
+                <span class="preset-visual multi-cat" aria-hidden="true"></span>
+                <span>
+                  <strong>Multi-Cat Flow</strong>
+                  <small>Two rests, open route</small>
+                </span>
+              </button>
+              <button class="preset-button" type="button" data-layout-preset="corner-nook">
+                <span class="preset-visual corner-nook" aria-hidden="true"></span>
+                <span>
+                  <strong>Corner Nook</strong>
+                  <small>Front plus right wall</small>
+                </span>
+              </button>
+            </div>
+          </section>
+
+          <section class="panel-section" id="catalogPanel">
+            <div class="section-heading">
+              <h2>Add Individual Pieces</h2>
               <span id="catalogCount">0 items</span>
             </div>
             <label class="field">
@@ -59,7 +223,7 @@
             <div class="catalog-list" id="catalogList"></div>
           </section>
 
-          <section class="panel-section">
+          <section class="panel-section" id="importPanel">
             <div class="section-heading">
               <h2>Import URL</h2>
               <span>local draft</span>
@@ -68,6 +232,10 @@
               <span>Product URL</span>
               <input id="importUrl" type="url" placeholder="https://etsy.com/listing/...">
             </label>
+            <div class="url-lookup-row">
+              <button class="secondary-button" id="lookupUrl" type="button">Look Up URL</button>
+              <span class="lookup-status" id="lookupStatus">Paste a product page to fill details.</span>
+            </div>
             <div class="compact-grid">
               <label class="field">
                 <span>Name</span>
@@ -107,19 +275,47 @@
                 <input id="importHeight" type="number" min="1" step="1" value="3">
               </label>
             </div>
+            <div class="import-image">
+              <div class="import-image-preview" id="importImagePreview" aria-hidden="true"></div>
+              <div class="import-image-controls">
+                <label class="field">
+                  <span>Product image URL</span>
+                  <input id="importImageUrl" type="url" placeholder="https://…/photo.jpg">
+                </label>
+                <label class="file-chip">
+                  <span>Upload photo</span>
+                  <input id="importImageFile" type="file" accept="image/*">
+                </label>
+              </div>
+            </div>
+            <p class="detect-hint" id="importDetect">Add a photo and Catify builds a 3D model from it — colors, shape, and a photo-mapped front.</p>
             <div class="action-row">
               <button class="primary-button" id="importProduct" type="button">Add To Library</button>
               <button class="secondary-button" id="openSearch" type="button">Search Web</button>
             </div>
-            <p class="fine-print">Known product URLs match real catalog items. Unknown shop URLs still become editable placeholders because static pages cannot scrape shops directly.</p>
+            <p class="fine-print">Catify reads product pages that allow browser lookup, then fills price, rating, dimensions, and photo-based modeling. If a shop blocks lookup, add the product photo or type the values manually.</p>
           </section>
         </aside>
 
-        <section class="designer-panel" aria-label="Wall designer">
+        <section class="designer-panel" id="wallDesigner" aria-label="Wall designer">
           <div class="toolbar">
             <div class="segmented-control" role="tablist" aria-label="View mode">
               <button class="is-active" id="mode2d" type="button" role="tab" aria-selected="true">2D</button>
               <button id="mode3d" type="button" role="tab" aria-selected="false">3D</button>
+            </div>
+            <div class="quick-stats" aria-label="Project summary">
+              <div>
+                <span>Pieces</span>
+                <strong id="quickPieces">0</strong>
+              </div>
+              <div>
+                <span>Total</span>
+                <strong id="quickTotal">$0</strong>
+              </div>
+              <div>
+                <span>Fit</span>
+                <strong id="quickFit">0%</strong>
+              </div>
             </div>
             <div class="toolbar-group">
               <button class="secondary-button" id="simulateCat" type="button">Simulate Cat</button>
@@ -131,7 +327,7 @@
             <div class="stage-meta">
               <div>
                 <strong id="wallLabel">12 ft x 8 ft wall</strong>
-                <span id="stageHint">Drag pieces to place them. Select a piece to edit exact dimensions.</span>
+                <span id="stageHint">2D layout canvas</span>
               </div>
               <div class="score-pill" id="fitScore">Fit score 0%</div>
             </div>
@@ -140,6 +336,18 @@
                 <div class="wall-grid"></div>
                 <div class="corner-strip" id="cornerStrip"></div>
                 <div class="floor-line"></div>
+                <div class="stage-empty" id="emptyStage">
+                  <div class="empty-preview" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <strong>Start with a layout</strong>
+                  <div class="empty-actions">
+                    <button class="primary-button" type="button" data-layout-preset="small-space">Load Starter</button>
+                    <a class="secondary-link" href="#catalogPanel">Browse Pieces</a>
+                  </div>
+                </div>
                 <div class="cat-ghost" id="catGhost" aria-hidden="true">
                   <span class="cat-body"></span>
                   <span class="cat-head"></span>
@@ -153,7 +361,6 @@
               </div>
               <div class="three-stage" id="threeStage">
                 <canvas id="threeCanvas" aria-label="3D wall preview"></canvas>
-                <div class="three-image-layer" id="threeImageLayer" aria-hidden="true"></div>
                 <div class="canvas-help">Drag pieces to move. Drag empty space to orbit.</div>
               </div>
             </div>
@@ -161,7 +368,7 @@
         </section>
 
         <aside class="sidebar inspector-panel" aria-label="Design settings and pricing">
-          <section class="panel-section price-card">
+          <section class="panel-section price-card" id="pricePanel">
             <div class="section-heading">
               <h2>Estimate</h2>
               <span id="pieceCount">0 pieces</span>
@@ -182,7 +389,38 @@
             </dl>
           </section>
 
-          <section class="panel-section">
+          <section class="panel-section" id="designBrief">
+            <div class="section-heading">
+              <h2>Design Brief</h2>
+              <span>planning</span>
+            </div>
+            <div class="compact-grid">
+              <label class="field">
+                <span>Style</span>
+                <select id="designStyle">
+                  <option value="natural">Natural wood</option>
+                  <option value="minimal">Warm minimal</option>
+                  <option value="modern">Modern contrast</option>
+                  <option value="playful">Playful color</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Goal</span>
+                <select id="designGoal">
+                  <option value="enrichment">Enrichment route</option>
+                  <option value="smallSpace">Small-space climb</option>
+                  <option value="multiCat">Multi-cat flow</option>
+                  <option value="floorSpace">Floor-space saver</option>
+                </select>
+              </label>
+            </div>
+            <label class="field brief-budget">
+              <span>Target budget</span>
+              <input id="designBudget" type="number" min="0" max="20000" step="25">
+            </label>
+          </section>
+
+          <section class="panel-section" id="wallSettings">
             <div class="section-heading">
               <h2>Wall</h2>
               <span>inches</span>
@@ -231,7 +469,7 @@
             </label>
           </section>
 
-          <section class="panel-section">
+          <section class="panel-section" id="catSettings">
             <div class="section-heading">
               <h2>Cat</h2>
               <span>fit model</span>
@@ -251,6 +489,15 @@
               </label>
             </div>
             <div class="analysis-list" id="analysisList"></div>
+          </section>
+
+          <section class="panel-section plan-panel" id="planPanel">
+            <div class="section-heading">
+              <h2>Plan</h2>
+              <span id="planStatus">brief</span>
+            </div>
+            <div class="mood-board" id="moodBoard" aria-label="Mood board"></div>
+            <div class="plan-list" id="planList"></div>
           </section>
 
           <section class="panel-section selected-panel">
@@ -305,6 +552,6 @@
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
