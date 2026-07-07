@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Design and price a custom cat wall with 2D planning, 3D preview, cat sizing, and static product imports.">
+    <title>Cat Wall Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">GitHub Pages ready</p>
+          <h1>Cat Wall Designer</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" id="saveDesign" type="button" title="Save design">
+            <span aria-hidden="true">S</span>
+            <span class="visually-hidden">Save design</span>
+          </button>
+          <button class="icon-button" id="exportDesign" type="button" title="Export design">
+            <span aria-hidden="true">EX</span>
+            <span class="visually-hidden">Export design</span>
+          </button>
+          <label class="file-button" title="Import design">
+            <span aria-hidden="true">IM</span>
+            <span class="visually-hidden">Import design</span>
+            <input id="importDesign" type="file" accept="application/json">
+          </label>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="sidebar catalog-panel" aria-label="Catalog and product import">
+          <section class="panel-section">
+            <div class="section-heading">
+              <h2>Find Pieces</h2>
+              <span id="catalogCount">0 items</span>
+            </div>
+            <label class="field">
+              <span>Search product or brand</span>
+              <input id="catalogSearch" type="search" placeholder="Frisco, PawHut, bowl, bridge">
+            </label>
+            <div class="filter-row" role="group" aria-label="Filter catalog by type">
+              <button class="chip is-active" type="button" data-filter="all">All</button>
+              <button class="chip" type="button" data-filter="shelf">Shelves</button>
+              <button class="chip" type="button" data-filter="bridge">Bridges</button>
+              <button class="chip" type="button" data-filter="scratcher">Scratchers</button>
+              <button class="chip" type="button" data-filter="hideout">Hideouts</button>
+            </div>
+            <div class="catalog-list" id="catalogList"></div>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-heading">
+              <h2>Import URL</h2>
+              <span>local draft</span>
+            </div>
+            <label class="field">
+              <span>Product URL</span>
+              <input id="importUrl" type="url" placeholder="https://etsy.com/listing/...">
+            </label>
+            <div class="compact-grid">
+              <label class="field">
+                <span>Name</span>
+                <input id="importName" type="text" placeholder="Auto from URL">
+              </label>
+              <label class="field">
+                <span>Type</span>
+                <select id="importType">
+                  <option value="shelf">Shelf</option>
+                  <option value="bridge">Bridge</option>
+                  <option value="hammock">Hammock</option>
+                  <option value="scratcher">Scratcher</option>
+                  <option value="hideout">Hideout</option>
+                  <option value="corner">Corner</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Price</span>
+                <input id="importPrice" type="number" min="0" step="1" placeholder="49">
+              </label>
+              <label class="field">
+                <span>Rating</span>
+                <input id="importRating" type="number" min="0" max="5" step="0.1" placeholder="4.7">
+              </label>
+            </div>
+            <div class="dimension-row">
+              <label class="field">
+                <span>W in</span>
+                <input id="importWidth" type="number" min="1" step="1" value="24">
+              </label>
+              <label class="field">
+                <span>D in</span>
+                <input id="importDepth" type="number" min="1" step="1" value="10">
+              </label>
+              <label class="field">
+                <span>H in</span>
+                <input id="importHeight" type="number" min="1" step="1" value="3">
+              </label>
+            </div>
+            <div class="action-row">
+              <button class="primary-button" id="importProduct" type="button">Add To Library</button>
+              <button class="secondary-button" id="openSearch" type="button">Search Web</button>
+            </div>
+            <p class="fine-print">Known product URLs match real catalog items. Unknown shop URLs still become editable placeholders because static pages cannot scrape shops directly.</p>
+          </section>
+        </aside>
+
+        <section class="designer-panel" aria-label="Wall designer">
+          <div class="toolbar">
+            <div class="segmented-control" role="tablist" aria-label="View mode">
+              <button class="is-active" id="mode2d" type="button" role="tab" aria-selected="true">2D</button>
+              <button id="mode3d" type="button" role="tab" aria-selected="false">3D</button>
+            </div>
+            <div class="toolbar-group">
+              <button class="secondary-button" id="simulateCat" type="button">Simulate Cat</button>
+              <button class="secondary-button" id="clearDesign" type="button">Clear</button>
+            </div>
+          </div>
+
+          <div class="stage-wrap">
+            <div class="stage-meta">
+              <div>
+                <strong id="wallLabel">12 ft x 8 ft wall</strong>
+                <span id="stageHint">Drag pieces to place them. Select a piece to edit exact dimensions.</span>
+              </div>
+              <div class="score-pill" id="fitScore">Fit score 0%</div>
+            </div>
+            <div class="stage is-2d" id="stage">
+              <div class="wall-stage" id="wall2d" aria-label="2D wall design area">
+                <div class="wall-grid"></div>
+                <div class="corner-strip" id="cornerStrip"></div>
+                <div class="floor-line"></div>
+                <div class="cat-ghost" id="catGhost" aria-hidden="true">
+                  <span class="cat-body"></span>
+                  <span class="cat-head"></span>
+                  <span class="cat-tail"></span>
+                </div>
+                <div class="cat-runner" id="catRunner" aria-hidden="true">
+                  <span class="cat-body"></span>
+                  <span class="cat-head"></span>
+                  <span class="cat-tail"></span>
+                </div>
+              </div>
+              <div class="three-stage" id="threeStage">
+                <canvas id="threeCanvas" aria-label="3D wall preview"></canvas>
+                <div class="canvas-help">Drag to orbit. Scroll to zoom.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="sidebar inspector-panel" aria-label="Design settings and pricing">
+          <section class="panel-section price-card">
+            <div class="section-heading">
+              <h2>Estimate</h2>
+              <span id="pieceCount">0 pieces</span>
+            </div>
+            <dl class="estimate-list">
+              <div>
+                <dt>Products</dt>
+                <dd id="subtotal">$0</dd>
+              </div>
+              <div>
+                <dt>Hardware buffer</dt>
+                <dd id="hardware">$0</dd>
+              </div>
+              <div>
+                <dt>Total</dt>
+                <dd id="totalPrice">$0</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-heading">
+              <h2>Wall</h2>
+              <span>inches</span>
+            </div>
+            <div class="dimension-row">
+              <label class="field">
+                <span>Width</span>
+                <input id="wallWidth" type="number" min="48" max="360" step="1">
+              </label>
+              <label class="field">
+                <span>Height</span>
+                <input id="wallHeight" type="number" min="48" max="180" step="1">
+              </label>
+              <label class="field">
+                <span>Depth</span>
+                <input id="wallDepth" type="number" min="12" max="180" step="1">
+              </label>
+            </div>
+            <label class="toggle-row">
+              <input id="cornerEnabled" type="checkbox">
+              <span>Add right-side corner wall</span>
+            </label>
+            <label class="field" id="cornerDepthField">
+              <span>Corner depth</span>
+              <input id="cornerDepth" type="number" min="12" max="180" step="1">
+            </label>
+            <label class="field">
+              <span>Room photo</span>
+              <input id="photoUpload" type="file" accept="image/*">
+            </label>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-heading">
+              <h2>Cat</h2>
+              <span>fit model</span>
+            </div>
+            <div class="dimension-row">
+              <label class="field">
+                <span>Length</span>
+                <input id="catLength" type="number" min="10" max="48" step="1">
+              </label>
+              <label class="field">
+                <span>Height</span>
+                <input id="catHeight" type="number" min="6" max="24" step="1">
+              </label>
+              <label class="field">
+                <span>Weight</span>
+                <input id="catWeight" type="number" min="3" max="30" step="1">
+              </label>
+            </div>
+            <div class="analysis-list" id="analysisList"></div>
+          </section>
+
+          <section class="panel-section selected-panel">
+            <div class="section-heading">
+              <h2>Selected</h2>
+              <span id="selectedStatus">none</span>
+            </div>
+            <div id="selectedEmpty" class="empty-state">Select a placed piece to edit its exact position, wall face, and price.</div>
+            <div id="selectedControls" class="selected-controls" hidden>
+              <label class="field">
+                <span>Name</span>
+                <input id="selectedName" type="text">
+              </label>
+              <div class="dimension-row">
+                <label class="field">
+                  <span>X</span>
+                  <input id="selectedX" type="number" min="0" step="1">
+                </label>
+                <label class="field">
+                  <span>Y</span>
+                  <input id="selectedY" type="number" min="0" step="1">
+                </label>
+                <label class="field">
+                  <span>Price</span>
+                  <input id="selectedPrice" type="number" min="0" step="1">
+                </label>
+              </div>
+              <div class="compact-grid">
+                <label class="field">
+                  <span>Face</span>
+                  <select id="selectedFace">
+                    <option value="front">Front</option>
+                    <option value="right">Right corner</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Rotation</span>
+                  <select id="selectedRotation">
+                    <option value="0">0 deg</option>
+                    <option value="90">90 deg</option>
+                    <option value="180">180 deg</option>
+                    <option value="270">270 deg</option>
+                  </select>
+                </label>
+              </div>
+              <button class="danger-button" id="removeSelected" type="button">Remove Piece</button>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
