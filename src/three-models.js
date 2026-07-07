@@ -14,11 +14,11 @@ function buildPieceModel(piece) {
     return group;
   }
 
-  const wood = new THREE.MeshStandardMaterial({ color: 0xb98652, roughness: 0.58, metalness: 0.02, map: three.textures.wood });
-  const darkWood = new THREE.MeshStandardMaterial({ color: 0x7a4f2f, roughness: 0.64, metalness: 0.02, map: three.textures.wood });
-  const carpet = new THREE.MeshStandardMaterial({ color: 0x8f9b88, roughness: 0.96, map: three.textures.carpet });
-  const sisal = new THREE.MeshStandardMaterial({ color: 0xc89e61, roughness: 0.95, map: three.textures.sisal });
-  const canvas = new THREE.MeshStandardMaterial({ color: 0x657c52, roughness: 0.86, map: three.textures.canvas });
+  const wood = new THREE.MeshStandardMaterial({ color: 0xbe8b57, roughness: 0.72, metalness: 0.02, map: three.textures.wood });
+  const darkWood = new THREE.MeshStandardMaterial({ color: 0x7a4f2f, roughness: 0.7, metalness: 0.02, map: three.textures.wood });
+  const carpet = new THREE.MeshStandardMaterial({ color: 0x9aa693, roughness: 0.98, map: three.textures.carpet });
+  const sisal = new THREE.MeshStandardMaterial({ color: 0xcaa066, roughness: 0.95, map: three.textures.sisal });
+  const canvas = new THREE.MeshStandardMaterial({ color: 0x7f9296, roughness: 0.9, map: three.textures.canvas });
   const white = new THREE.MeshStandardMaterial({ color: 0xf4f1ea, roughness: 0.72 });
   const black = new THREE.MeshStandardMaterial({ color: 0x171717, roughness: 0.8 });
   const metal = new THREE.MeshStandardMaterial({ color: 0x46514e, roughness: 0.36, metalness: 0.55 });
@@ -464,31 +464,37 @@ function addSisalWrapLines(group, post, height, material) {
 }
 
 function addSelectionRing(model, piece) {
-  const box = new THREE.Box3().setFromObject(model);
-  const size = box.getSize(new THREE.Vector3());
-  const ring = new THREE.Mesh(
-    new THREE.BoxGeometry(size.x + 4, size.y + 4, 1),
-    new THREE.MeshBasicMaterial({ color: 0x0f766e, transparent: true, opacity: 0.32 })
+  // Clean wireframe outline instead of a translucent slab.
+  const w = piece.width + 3;
+  const h = Math.max(piece.height, 4) + 3;
+  const d = piece.depth + 3;
+  const edges = new THREE.EdgesGeometry(new THREE.BoxGeometry(w, h, d));
+  const ring = new THREE.LineSegments(
+    edges,
+    new THREE.LineBasicMaterial({ color: 0x0f766e, transparent: true, opacity: 0.85 })
   );
-  ring.position.set(0, 0, piece.depth / 2 + 2);
+  ring.renderOrder = 2;
   model.add(ring);
 }
 
 function addWarningMarker(model, piece) {
-  const marker = new THREE.Mesh(
-    new THREE.SphereGeometry(2.8, 16, 16),
-    new THREE.MeshStandardMaterial({ color: 0xb9553f, emissive: 0x5b160f, emissiveIntensity: 0.4 })
+  // Small amber pin tucked to the top corner, not a big red gumball.
+  const pin = new THREE.Mesh(
+    new THREE.SphereGeometry(1.5, 18, 14),
+    new THREE.MeshStandardMaterial({ color: 0xe0982f, emissive: 0x8a4e12, emissiveIntensity: 0.45, roughness: 0.35 })
   );
-  marker.position.set(piece.width / 2 - 3, piece.height / 2 + 5, piece.depth / 2 + 3);
-  model.add(marker);
+  pin.position.set(piece.width / 2 - 1.5, piece.height / 2 + 3, piece.depth / 2);
+  model.add(pin);
 }
 
 function addReachGlow(model, piece) {
-  const glow = new THREE.Mesh(
-    new THREE.BoxGeometry(piece.width + 2, Math.max(piece.height, 4) + 2, piece.depth + 2),
-    new THREE.MeshBasicMaterial({ color: 0x0f766e, transparent: true, opacity: 0.12 })
+  // A quiet teal underline at the base — signals "reachable" without a glass cube.
+  const bar = new THREE.Mesh(
+    new THREE.BoxGeometry(Math.max(4, piece.width * 0.55), 0.7, 0.7),
+    new THREE.MeshBasicMaterial({ color: 0x14b8a6, transparent: true, opacity: 0.55 })
   );
-  model.add(glow);
+  bar.position.set(0, -Math.max(piece.height, 4) / 2 - 1.4, piece.depth / 2);
+  model.add(bar);
 }
 
 export {

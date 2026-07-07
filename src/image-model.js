@@ -313,6 +313,35 @@ function mat(color, roughness = 0.7, metalness = 0.03) {
   return new THREE.MeshStandardMaterial({ color, roughness, metalness });
 }
 
+// Soft-edged box (flat-shaded, so no texture-UV issues). Centered at the origin.
+function roundedBox(w, h, d, radius) {
+  const r = Math.max(0.25, Math.min(radius, w / 2 - 0.1, h / 2 - 0.1));
+  const x = -w / 2;
+  const y = -h / 2;
+  const shape = new THREE.Shape();
+  shape.moveTo(x + r, y);
+  shape.lineTo(x + w - r, y);
+  shape.quadraticCurveTo(x + w, y, x + w, y + r);
+  shape.lineTo(x + w, y + h - r);
+  shape.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  shape.lineTo(x + r, y + h);
+  shape.quadraticCurveTo(x, y + h, x, y + h - r);
+  shape.lineTo(x, y + r);
+  shape.quadraticCurveTo(x, y, x + r, y);
+  const bevel = Math.min(0.7, d / 4, r);
+  const geo = new THREE.ExtrudeGeometry(shape, {
+    depth: Math.max(0.1, d - bevel * 2),
+    bevelEnabled: true,
+    bevelThickness: bevel,
+    bevelSize: bevel,
+    bevelSegments: 2,
+    curveSegments: 5
+  });
+  geo.translate(0, 0, -d / 2 + bevel);
+  geo.computeVertexNormals();
+  return geo;
+}
+
 function buildGeneratedModel(group, piece) {
   const src = piece.imageUrl || piece.assetUrl || "";
   const analysis = getAnalysis(src);
@@ -337,12 +366,11 @@ function buildGeneratedModel(group, piece) {
 
 function genShelf(group, p, pal) {
   const shelfH = Math.max(2.2, Math.min(p.height, p.height * 0.6));
-  const shelf = new THREE.Mesh(new THREE.BoxGeometry(p.width, shelfH, p.depth), mat(pal.body, 0.64));
+  const shelf = new THREE.Mesh(roundedBox(p.width, shelfH, p.depth, Math.min(shelfH, p.depth) * 0.24), mat(pal.body, 0.64));
   const padH = Math.max(1, p.height * 0.18);
-  const pad = new THREE.Mesh(new THREE.BoxGeometry(p.width * 0.9, padH, p.depth * 0.82), mat(pal.accent, 0.9));
+  const pad = new THREE.Mesh(roundedBox(p.width * 0.9, padH, p.depth * 0.82, padH * 0.4), mat(pal.accent, 0.9));
   pad.position.y = shelfH / 2 + padH / 2;
   group.add(shelf, pad);
-  genEdgeBand(group, p.width, p.depth, shelfH, pal.dark);
   genBrackets(group, p, pal.dark);
 }
 
@@ -362,7 +390,7 @@ function genPost(group, p, pal) {
 }
 
 function genTower(group, p, pal) {
-  const box = new THREE.Mesh(new THREE.BoxGeometry(p.width, p.height, p.depth), mat(pal.body, 0.7));
+  const box = new THREE.Mesh(roundedBox(p.width, p.height, p.depth, Math.min(p.width, p.depth) * 0.14), mat(pal.body, 0.7));
   group.add(box);
   const roofH = Math.max(1, p.height * 0.06);
   const roof = new THREE.Mesh(new THREE.BoxGeometry(p.width * 1.05, roofH, p.depth * 1.02), mat(pal.accent, 0.85));
@@ -372,7 +400,7 @@ function genTower(group, p, pal) {
 }
 
 function genHideout(group, p, pal) {
-  const box = new THREE.Mesh(new THREE.BoxGeometry(p.width, p.height, p.depth), mat(pal.body, 0.68));
+  const box = new THREE.Mesh(roundedBox(p.width, p.height, p.depth, Math.min(p.width, p.height, p.depth) * 0.16), mat(pal.body, 0.68));
   group.add(box);
   genFaceFrame(group, 0, 0, p.depth / 2 + 0.55, p.width, p.height, pal.dark);
   genOpening(group, 0, 0, p.depth / 2 + 0.5, Math.min(p.width, p.height) * 0.24, 0x1c130d);
@@ -380,7 +408,7 @@ function genHideout(group, p, pal) {
 
 function genBridge(group, p, pal) {
   const endW = Math.max(4, Math.min(10, p.width * 0.16));
-  const left = new THREE.Mesh(new THREE.BoxGeometry(endW, p.height, p.depth), mat(pal.body, 0.66));
+  const left = new THREE.Mesh(roundedBox(endW, p.height, p.depth, Math.min(endW, p.depth) * 0.22), mat(pal.body, 0.66));
   left.position.x = -p.width / 2 + endW / 2;
   const right = left.clone();
   right.position.x = p.width / 2 - endW / 2;

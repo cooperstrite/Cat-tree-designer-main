@@ -1398,33 +1398,73 @@ body[data-step="review"] .selected-panel {
 .cat-tail {
   position: absolute;
   display: block;
-  background: #242a28;
+  border: 1px solid rgba(24, 33, 31, 0.24);
+  background: #f1d7a8;
+  box-shadow: 0 3px 0 rgba(24, 33, 31, 0.12);
 }
 
 .cat-body {
-  left: 18%;
-  right: 18%;
-  bottom: 13%;
-  height: 52%;
-  border-radius: 50% 45% 42% 48%;
+  left: 17%;
+  right: 19%;
+  bottom: 18%;
+  height: 50%;
+  border-radius: 58% 48% 44% 52%;
+  background:
+    radial-gradient(ellipse at 24% 30%, #2a302d 0 17%, transparent 18%),
+    radial-gradient(ellipse at 62% 68%, #d58945 0 20%, transparent 21%),
+    radial-gradient(ellipse at 76% 26%, #fff1cf 0 16%, transparent 17%),
+    linear-gradient(135deg, #f3dfb8, #dba467 68%, #2a302d 69% 100%);
+}
+
+.cat-body::before,
+.cat-body::after {
+  content: "";
+  position: absolute;
+  bottom: -19%;
+  width: 12%;
+  height: 39%;
+  border-radius: 999px 999px 6px 6px;
+  background: linear-gradient(180deg, #2a302d 0 48%, #fff2d6 49% 100%);
+  box-shadow:
+    18px 1px 0 #f0d0a3,
+    36px -1px 0 #2a302d,
+    54px 1px 0 #d58945;
+}
+
+.cat-body::before {
+  left: 15%;
+}
+
+.cat-body::after {
+  right: 12%;
+  opacity: 0.9;
 }
 
 .cat-head {
-  right: 6%;
-  bottom: 38%;
-  width: 26%;
-  height: 36%;
-  border-radius: 50%;
+  right: 5%;
+  bottom: 42%;
+  width: 29%;
+  height: 38%;
+  border-radius: 54% 58% 52% 48%;
+  background:
+    radial-gradient(circle at 36% 43%, #111716 0 7%, transparent 8%),
+    radial-gradient(circle at 66% 43%, #111716 0 7%, transparent 8%),
+    radial-gradient(ellipse at 51% 64%, #fff1cf 0 24%, transparent 25%),
+    radial-gradient(ellipse at 74% 22%, #d58945 0 28%, transparent 29%),
+    linear-gradient(145deg, #f6e1b8, #f0c987);
 }
 
 .cat-head::before,
 .cat-head::after {
   content: "";
   position: absolute;
-  top: -26%;
-  width: 34%;
-  height: 34%;
-  background: #242a28;
+  top: -27%;
+  width: 36%;
+  height: 38%;
+  background:
+    linear-gradient(135deg, transparent 18%, #e8a5a0 19% 43%, transparent 44%),
+    #f1d7a8;
+  border: 1px solid rgba(24, 33, 31, 0.22);
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
 }
 
@@ -1437,13 +1477,51 @@ body[data-step="review"] .selected-panel {
 }
 
 .cat-tail {
-  left: 4%;
-  bottom: 49%;
-  width: 24%;
-  height: 15%;
-  border-radius: 999px;
-  transform: rotate(-30deg);
+  left: 2%;
+  bottom: 50%;
+  width: 29%;
+  height: 14%;
+  border-radius: 999px 999px 999px 40%;
+  background: repeating-linear-gradient(90deg, #2a302d 0 18%, #d58945 18% 34%, #f3dfb8 34% 52%);
+  transform: rotate(-32deg);
   transform-origin: right center;
+}
+
+.cat-tail::after {
+  content: "";
+  position: absolute;
+  left: -8%;
+  top: -15%;
+  width: 28%;
+  height: 125%;
+  border-radius: 50%;
+  background: #2a302d;
+}
+
+.cat-runner.is-running .cat-body {
+  animation: cat-bob 520ms ease-in-out infinite alternate;
+}
+
+.cat-runner.is-running .cat-tail {
+  animation: tail-swish 420ms ease-in-out infinite alternate;
+}
+
+@keyframes cat-bob {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes tail-swish {
+  from {
+    transform: rotate(-38deg);
+  }
+  to {
+    transform: rotate(-22deg);
+  }
 }
 
 .three-stage {
